@@ -1,0 +1,62 @@
+// =====  SECTION PLAYERS STYLE===== //
+
+// ===== SECTION HEADING ===== //
+.section-heading__title {
+  @include wrapper(90%, 0 auto);
+  padding-bottom: 0.5rem;
+  text-align: center;
+  border-bottom: 4px solid $yellow;
+}
+
+// ===== SECTION BODY ===== //
+.section-body {
+  @include wrapper(90%, 0 auto);
+  margin-top: 2rem;
+}
+
+// ===== FIRST ROSTER ===== //
+.first-roster {
+  @include flexBox(center, center);
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+// ===== SUB ROSTER ===== //
+.sub-roster {
+  @include flexBox(center, center);
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 2.5rem 0;
+  border-top: solid 4px #e20c0c;
+}
+
+// ===== PLAYER CARD ===== //
+.player-card {
+  flex-basis: 15%;
+  min-width: 15rem;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+
+  h3 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  p {
+    font-size: 0.8rem;
+
+    span {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+// ===== HEADER STYLE ===== //
+.header {
+  background-color: $red;
+  height: 100px;
+}
+
+// ===== NAVBAR ===== //
+.navbar {
+  position: relative;
+  @include flexBox(space-between, initial);
+  @include wrapper(90%, 0 auto);
+}
+
+// ===== NAVBAR BTN ===== //
+.navbar-btn {
+  position: relative;
+  top: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 9;
+
+  &__line {
+    width: 30px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background-color: #fff;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ===== NAVBAR BRAND ===== //
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  margin-top: 5px;
+  text-align: center;
+  transform: translate(-50%, 0);
+  z-index: 3;
+
+  &__logo {
+    width: 97px;
+  }
+}
+
+// ===== NAVBAR SEARCH ===== //
+.navbar-search {
+  position: relative;
+  top: 40px;
+  i {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+}

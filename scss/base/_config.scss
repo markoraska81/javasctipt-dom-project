@@ -1,0 +1,82 @@
+// ===== CONFIG ===== //
+$dark: #141416;
+$gray: #f4f4f4;
+$red: #ed1c24;
+$yellow: #d0ae6e;
+
+// ===== FONTS ===== //
+$montserrat: 'Montserrat', sans-serif;
+$openSans: 'Open Sans', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+
+// ===== TRANSITION ===== //
+$linear: all 0.4s linear;
+$ease-in-out: all 0.4s ease-in-out;
+
+// ===== SET TEXT COLOR ===== //
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return $dark;
+  } @else {
+    @return #fff;
+  }
+}
+
+// ===== SET TEXT COLOR BASED ON BACKGROUND ===== //
+@mixin set-background($color) {
+  background-color: ($color);
+  color: set-text-color($color);
+  a {
+    color: set-text-color($color);
+  }
+}
+
+// ===== FLEXBOX ===== //
+@mixin flexBox($content, $align) {
+  display: flex;
+  justify-content: $content;
+  align-items: $align;
+}
+
+// ===== RAPPER ===== //
+@mixin wrapper($width, $margin) {
+  width: 100%;
+  max-width: $width;
+  margin: $margin;
+}
+
+// ===== CLEARFIX ===== //
+@mixin clearFix {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+// ===== MEDIA QUERY ===== //
+// MOBILE
+@mixin mobile($width: 500px) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+// TABLET
+@mixin tablet($width: 768px) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+// LAPTOP
+@mixin laptop($width: 1024px) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+// LAPTOP
+@mixin desktop($width: 1200px) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
