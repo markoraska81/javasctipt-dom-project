@@ -193,4 +193,4 @@ function createPlayer(data) {
 }
 
 newPlayers();
-// setInterval(makeSubstitution, 5000);
+setInterval(makeSubstitution, 5000);
